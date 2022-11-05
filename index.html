@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">IK</a>
+        <ul>
+            <li><a href="#" class="active">INICIO</a></li>
+            <li><a href="#">CONTACTO</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" id="stars">
+        <img src="images/moon.png" id="moon">
+        <h2 id="text">Crear CRUD</h2>
+        
+        <img src="images/mountains_behind.png" id="behind">
+        <img src="images/mountains_front.png" id="front">
+    </section>
+    <div class="sec">
+        <img src="" alt="">
+        <h2> Crear CRUD con Laravel 8 y Livewire</h2>
+        <p> En este tutorial aprenderás cómo crear un CRUD sencillo con Laravel 8 y Livewire. CRUD (Create, Read, Update, Delete) por sus siglas en Inglés son las cuatro funciones persistentes en una base de datos que todo sistema web debe hacer. Livewire es un framework para Laravel para el desarrollo de componentes que nos permite crear interfaces dinámicas. Al final del tutorial encontrarás el link del repositorio del proyecto. Sin más, manos a la obra.</p>
+        <br><br> 
+        
+        <h3>Requisitos previos:</h3><br> 
+        <ol>
+            <li>Contar con un entorno de desarrollo como XAMPP o <a href="https://diarioprogramador.com/que-es-y-como-instalar-laragon/">Laragon.</a></li>
+            <li>Tener instalado composer de manera global en tu sistema operativo.</li>
+            <li>Node.</li>
+        </ol><br><br> 
+        <h6>Crear un proyecto nuevo Laravel con laravel/ui</h6></<br><br> 
+        
+        <p>Para crear un nuevo proyecto con el instalador de Laravel abre tu terminal de comandos en la raíz de tu entorno de desarrollo y ejecuta el siguiente comando:</p> <br><br>        
+        <p><strong> global require laravel/installer</strong></p><br><br>
+<h6>Crea un nuevo proyecto invocando el instalador de Laravel:</h6>
+<p><strong>laravel new laravel-livewire</strong></p><br><br>
+<p>Se iniciará la instalación del nuevo proyecto</p><br><br>
+<p>Para este proyecto usaré como sistema de autenticación laravel/ui pero tu puedes usar el sistema que mejor se adapte a las necesidades de tu proyecto. Para instalar laravel/ui ejecuta uno a uno los siguientes comandos:</p>
+<p><strong><ul><li>composer require laravel/ui</li>
+
+    <li>php artisan ui bootstrap </li>
+    
+    <li>php artisan ui bootstrap --auth </li>
+    
+    <li>npm i </li>
+    
+    <li> npm run watch-poll</li>
+    
+    <li>npm install && npm run dev</li></ul></strong></p>
+
+
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let front= document.getElementById('front');
+        let behind = document.getElementById('behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            behind.style.top = value * 0.5 + 'px';
+            front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+        })
+
+    </script>
+</body>
+</html>
